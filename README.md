@@ -168,6 +168,7 @@ Basic Authentication: user and password created
 Token: 4a9a6162a1c2db905dffa47dede319c4
 ```
 
+```
 curl --user samuel.oliva:abcdef -X POST http://localhost:8080/page \
 -H "Content-Type: application/json" \
 -H "Token: 4a9a6162a1c2db905dffa47dede319c4" \
@@ -179,7 +180,7 @@ curl --user samuel.oliva:abcdef -X POST http://localhost:8080/page \
     "flyerId": 1
   }
 '
-
+```
 
 ##### GET 
 
@@ -217,6 +218,7 @@ Token: 4a9a6162a1c2db905dffa47dede319c4
 
 Example:
 
+```
 curl --user samuel.oliva:abcdef -X PUT http://localhost:8080/page/1 \
 -H "Content-Type: application/json" \
 -H "Token: 4a9a6162a1c2db905dffa47dede319c4" \
@@ -228,6 +230,7 @@ curl --user samuel.oliva:abcdef -X PUT http://localhost:8080/page/1 \
     "flyerId": 1
   }
 '
+```
 
 ##### DELETE 
 
