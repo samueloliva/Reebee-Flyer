@@ -66,7 +66,7 @@ Basic Authentication: user and password created
 Token: 4a9a6162a1c2db905dffa47dede319c4
 ```
 
-Example:
+Examples:
 
 ```
 curl --user samuel.oliva:abcdef -X POST http://localhost:8080/flyer \
@@ -78,6 +78,21 @@ curl --user samuel.oliva:abcdef -X POST http://localhost:8080/flyer \
     "storeName": "Store X",
     "dateValid": "2021-03-20",
     "dateExpired": "2021-03-23",
+    "pageCount": 1
+  }
+'
+```
+
+```
+curl --user samuel.oliva:abcdef -X POST http://localhost:8080/flyer \
+-H "Content-Type: application/json" \
+-H "Token: 4a9a6162a1c2db905dffa47dede319c4" \
+-d ' 
+  {
+    "name": "Flyer Y",
+    "storeName": "Store Y",
+    "dateValid": "2021-04-20",
+    "dateExpired": "2021-04-23",
     "pageCount": 1
   }
 '
@@ -102,7 +117,7 @@ curl http://localhost:8080/flyer
 ```
 
 ```
-curl http://localhost:8080/flyer/2
+curl http://localhost:8080/flyer/1
 ```
 
 ##### PUT
@@ -128,8 +143,8 @@ curl --user samuel.oliva:abcdef -X PUT http://localhost:8080/flyer/1 \
     "name": "Flyer 1",
     "storeName": "Super Store 1",
     "dateValid": "2021-05-20",
-    "dateExpired": "2021-05-20",
-    "pageCount": 2
+    "dateExpired": "2021-05-28",
+    "pageCount": 1
   }
 '
 ```
@@ -149,7 +164,7 @@ Token: 4a9a6162a1c2db905dffa47dede319c4
 Example: 
 
 ```
-curl --user samuel.oliva:abcdef -X DELETE http://localhost:8080/flyer/1 \
+curl --user samuel.oliva:abcdef -X DELETE http://localhost:8080/flyer/2 \
 -H "Content-Type: application/json" \
 -H "Token: 4a9a6162a1c2db905dffa47dede319c4"
 ```
